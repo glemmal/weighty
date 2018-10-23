@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component renders correctly 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar is-danger"
+  role="navigation"
+>
+  <div
+    className="navbar-brand"
+  >
+    <a
+      className="navbar-item"
+      href="https://bulma.io"
+    >
+      <img
+        alt="Weighty logo"
+        height="28"
+        src="weighty.svg"
+        width="112"
+      />
+    </a>
+  </div>
+</nav>
+`;

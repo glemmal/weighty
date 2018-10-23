@@ -1,53 +1,31 @@
+import './App.scss';
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import logo from './logo.svg';
 import { addWeight, removeWeight } from './store/actions/weightActions';
-import './App.css';
+
+import Navigation from './components/Navigation';
+import WeightInput from './components/WeightInput';
+import WeightEntryList from './components/WeightEntryList';
+import WeightGraph from './components/WeightGraph';
 
 class App extends Component {
-
-  addWeight = (event) => {
-    this.props.addWeight(300);
-  }
-
-  removeWeight = (event) => {
-    this.props.removeWeight(300);
-  }
-
-  onInputChange (event) {
-    this.props.addWeight(event.target.value);
-  }
-
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <input placeholder="add some weight" onChange={this.onInputChange.bind(this)}/>
-          <button onClick={this.addWeight}>Add some weight!</button>
-          <button onClick={this.removeWeight}>Remove some weight!</button>
-          <ul>
-            {this.props.weights.map((v) => (
-              <li key={v}>{v}</li>
-            ))}
-          </ul>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        <pre>
-          {
-            JSON.stringify(this.props)
-          }
-        </pre>
+        <Navigation></Navigation>
+        <div className="container weighty-container">
+          <div className="input-widget tile box">
+            {this.props.weights.length > 0 &&
+              <WeightGraph weights={this.props.weights} />
+            }
+            <WeightInput addWeight={this.props.addWeight}></WeightInput>
+            {this.props.weights.length > 0 && 
+              <WeightEntryList removeWeight={this.props.removeWeight} 
+              weights={this.props.weights} />
+            }
+          </div>
+        </div>
       </div>
     );
   }

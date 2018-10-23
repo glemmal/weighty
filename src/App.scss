@@ -1,0 +1,55 @@
+@import '../node_modules/bulma/bulma.sass';
+
+.weight-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.weighty-container {
+  display: flex;
+  justify-content: center;
+}
+
+.weight-graph {
+  width: 100%;
+}
+
+.input-widget {
+  max-width: 450px;
+  flex-direction: column;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.weight-entry-list {
+  margin-top: 10px;
+  .fa {
+    color: #393939;
+  }
+}
+
+.input:focus {
+  outline: none;
+}
+
+.remove-column {
+  width: 60px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.appear {
+  animation: appear .5s ease-in-out;
+}
