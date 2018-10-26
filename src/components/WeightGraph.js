@@ -45,7 +45,6 @@ class WeightGraph extends Component {
           <Bar 
             unit="kg" 
             dataKey="weight" 
-            fill="#8884d8" 
             fill="#393939"/>
         </BarChart>
       </ResponsiveContainer>

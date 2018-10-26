@@ -26,9 +26,9 @@ class WeightEntryList extends Component {
                 <td>{distanceInWords(new Date(w.createdAt), new Date())}</td>
                 <td>{diffFromWeight(w, this.props.weights)} kg</td>
                 <td className="remove-column">
-                  <a href="" onClick={() => this.props.removeWeight(w.uuid)}>
+                  <button className="button" onClick={() => this.props.removeWeight(w.uuid)}>
                     <span className="fa fa-times"></span>
-                  </a>
+                  </button>
                 </td>
               </tr>
             ))}
