@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/glemmal/weighty.svg?branch=master)](https://travis-ci.org/glemmal/weighty)
 
+![weighty](https://raw.githubusercontent.com/glemmal/weighty/master/logo.png)
+
 # Weighty
 Track your current weight with [Weighty](http://weighty.surge.sh/).
 
