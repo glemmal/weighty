@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/glemmal/weighty.svg?branch=master)](https://travis-ci.org/voronianski/swapi-graphql-react-app)
+
 # Weighty
 Track your current weight with [Weighty](http://weighty.surge.sh/).
 
