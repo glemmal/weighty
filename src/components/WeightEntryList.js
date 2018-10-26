@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import { distanceInWords } from 'date-fns';
 
 function diffFromWeight (weight, weights) {
-  const before = weights[weights.indexOf(weight) - 1];
-  return (before ? weight.value - before.value : 0).toFixed(2);
+  const before = weights[weights.indexOf(weight) + 1];
+  const diff = (before ? weight.value - before.value : 0).toFixed(2);
+
+  return diff > 0 ? `+${diff}` : diff;
 }
 
 class WeightEntryList extends Component {
